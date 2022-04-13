@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bankDeposits xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="https://www.example.org/bankDeposits" xsi:schemaLocation="http://www.example.org/bankDeposits FileXSD.xsd">
+<deposit id="1">
+    <name>Bank</name>
+    <country>Belarus</country>
+    <Type>Demand</Type>
+    <depositor>Ivanov</depositor>
+    <accountID>125</accountID>
+    <amountOnDeposit>100</amountOnDeposit>
+    <profitability>13</profitability>
+    <timeConstraints>2</timeConstraints>
+</deposit>
+    <deposit id="2">
+        <name>BankN</name>
+        <country>Belarus</country>
+        <Type>Demand</Type>
+        <depositor>Petrov</depositor>
+        <accountID>126</accountID>
+        <amountOnDeposit>1000</amountOnDeposit>
+        <profitability>15</profitability>
+        <timeConstraints>1</timeConstraints>
+    </deposit>
+
+</bankDeposits>
