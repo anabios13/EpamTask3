@@ -1,14 +1,24 @@
 package Objects;
 
 public class Deposit {
-    String name;
-    String country;
-    Enum Type;
-    String depositor;
-    int accountID;
-    int amountOnDeposit;
-    int profitability;
-    int timeConstraints;
+    private String identity;
+    private String name;
+    private String country;
+    private DepositType depositType;
+    private String depositor;
+    private int accountID;
+    private int amountOnDeposit;
+    private int profitability;
+
+    public void setIdentity(String identity) {
+        this.identity = identity;
+    }
+
+    public String getIdentity() {
+        return identity;
+    }
+
+    private int timeConstraints;
 
     public void setName(String name) {
         this.name = name;
@@ -16,10 +26,6 @@ public class Deposit {
 
     public void setCountry(String country) {
         this.country = country;
-    }
-
-    public void setType(Enum type) {
-        Type = type;
     }
 
     public void setDepositor(String depositor) {
@@ -50,8 +56,12 @@ public class Deposit {
         return country;
     }
 
-    public Enum getType() {
-        return Type;
+    public void setDepositType(DepositType depositType) {
+        this.depositType = depositType;
+    }
+
+    public DepositType getDepositType() {
+        return depositType;
     }
 
     public String getDepositor() {
@@ -72,5 +82,18 @@ public class Deposit {
 
     public int getTimeConstraints() {
         return timeConstraints;
+    }
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("AccountID: ").append(getAccountID()).append('\n');
+        builder.append("Bank name: ").append(getName()).append('\n');
+        builder.append("Country: ").append(getCountry()).append('\n');
+        builder.append("Depositor: ").append(getDepositor()).append('\n');
+        builder.append("Amount On Deposit: ").append(getAmountOnDeposit()).append('\n');
+        builder.append("Deposit type: ").append(getDepositType().getName()).append('\n');
+        builder.append("Profitability: ").append(getProfitability()).append('\n');
+        builder.append("Time Constraints: ").append(getTimeConstraints()).append('\n');
+        return builder.toString();
     }
 }
