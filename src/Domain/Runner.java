@@ -1,7 +1,10 @@
 package Domain;
 
 import java.io.IOException;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
 
 import javax.xml.stream.XMLStreamException;
 
@@ -14,17 +17,12 @@ public class Runner {
         if (validator.validate()) {
             XmlReader reader = new XmlReader();
             List<Deposit> deposits = reader.read("file1.xml");
-//            Random random = new Random();
-//            for (Deposit deposit : deposits) {
-//                deposit.setCost((long) (deposit.getCost() * (1 + random.nextInt(100) / 100.0)));
-//            }
-////            Collections.sort(Deposits);
-//            Collections.sort(deposits, new Comparator<Deposit>() {
-//                @Override
-//                public int compare(Deposit o1, Deposit o2) {
-//                    return o2.getCost().compareTo(o1.getCost());s
-//                }
-//            });
+            Random random = new Random();
+            for (Deposit deposit : deposits) {
+
+            }
+//            Collections.sort(Deposits);
+
             for (Deposit deposit : deposits) {
                 System.out.println(deposit);
             }
