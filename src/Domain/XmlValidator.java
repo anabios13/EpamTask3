@@ -14,7 +14,7 @@ import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
 public class XmlValidator extends DefaultHandler {
-    public static final String SCHEMA_FILE_NAME = "D:\\EPAM_Projects\\EpamTask3\\src\\file1.xml";
+    public static final String SCHEMA_FILE_NAME = "file2.xsd";
 
     private StringBuilder error = new StringBuilder();
 

@@ -10,8 +10,8 @@ import Objects.Deposit;
 
 public class Runner {
     public static void main(String[] args) throws IOException, XMLStreamException {
-      //  XmlValidator validator = new XmlValidator("file1.xml");
-     //   if (validator.validate()) {
+        XmlValidator validator = new XmlValidator("file1.xml");
+        if (validator.validate()) {
             XmlReader reader = new XmlReader();
             List<Deposit> deposits = reader.read("file1.xml");
 //            Random random = new Random();
@@ -22,16 +22,16 @@ public class Runner {
 //            Collections.sort(deposits, new Comparator<Deposit>() {
 //                @Override
 //                public int compare(Deposit o1, Deposit o2) {
-//                    return o2.getCost().compareTo(o1.getCost());
+//                    return o2.getCost().compareTo(o1.getCost());s
 //                }
 //            });
             for (Deposit deposit : deposits) {
                 System.out.println(deposit);
             }
         }
-        //else {
-       //     System.out.println(validator.getError());
-      //  }
-   // }
+        else {
+            System.out.println(validator.getError());
+        }
+    }
 }
 

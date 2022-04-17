@@ -16,19 +16,18 @@ import Objects.DepositType;
 
 public class XmlReader {
     public List<Deposit> read(String fileName) throws FileNotFoundException {
-        fileName = "file1.xml";
         XMLStreamReader reader = null;
         try {
             List<Deposit> Deposits = new ArrayList<Deposit>();
             Deposit deposit = null;
             XMLInputFactory factory = XMLInputFactory.newFactory();
-            reader = factory.createXMLStreamReader(new FileInputStream("file1.xml"));
+            reader = factory.createXMLStreamReader(new FileInputStream(fileName));
             while (reader.hasNext()) {
                 int type = reader.next();
                 switch (type) {
                     case XMLStreamConstants.START_ELEMENT: {
                         String tagName = reader.getLocalName();
-                        if ("Deposit".equals(tagName)) {
+                        if ("deposit".equals(tagName)) {
                             deposit = new Deposit();
                             deposit.setIdentity(reader.getAttributeValue(null, "id"));
                         } else if ("name".equals(tagName)) {
