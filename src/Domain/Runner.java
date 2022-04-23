@@ -17,12 +17,6 @@ public class Runner {
         if (validator.validate()) {
             XmlReader reader = new XmlReader();
             List<Deposit> deposits = reader.read("file1.xml");
-            Random random = new Random();
-            for (Deposit deposit : deposits) {
-
-            }
-//            Collections.sort(Deposits);
-
             for (Deposit deposit : deposits) {
                 System.out.println(deposit);
             }

@@ -34,7 +34,7 @@ public class XmlReader {
                             deposit.setName(reader.getElementText());
                         } else if ("country".equals(tagName)) {
                             deposit.setCountry(reader.getElementText());
-                        } else if ("transport".equals(tagName)) {
+                        } else if ("depositType".equals(tagName)) {
                             deposit.setDepositType(DepositType.valueOf(reader.getElementText()));
                         } else if ("depositor".equals(tagName)) {
                             deposit.setDepositor(reader.getElementText());
@@ -45,11 +45,14 @@ public class XmlReader {
                         } else if ("profitability".equals(tagName)) {
                             deposit.setProfitability(Integer.parseInt(reader.getElementText()));
                         }
+                        else if ("timeConstraints".equals(tagName)) {
+                            deposit.setTimeConstraints(Integer.parseInt(reader.getElementText()));
+                        }
                         break;
                     }
                     case XMLStreamConstants.END_ELEMENT: {
                         String tagName = reader.getLocalName();
-                        if ("Deposit".equals(tagName)) {
+                        if ("deposit".equals(tagName)) {
                             Deposits.add(deposit);
                         }
                         break;
