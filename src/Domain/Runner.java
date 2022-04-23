@@ -2,9 +2,7 @@ package Domain;
 
 import java.io.IOException;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
-import java.util.Random;
 
 import javax.xml.stream.XMLStreamException;
 
@@ -17,11 +15,11 @@ public class Runner {
         if (validator.validate()) {
             XmlReader reader = new XmlReader();
             List<Deposit> deposits = reader.read("file1.xml");
+            Collections.sort(deposits);
             for (Deposit deposit : deposits) {
                 System.out.println(deposit);
             }
-        }
-        else {
+        } else {
             System.out.println(validator.getError());
         }
     }

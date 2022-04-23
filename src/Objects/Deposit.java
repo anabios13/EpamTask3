@@ -1,6 +1,7 @@
 package Objects;
 
-public class Deposit {
+
+public class Deposit implements Comparable<Deposit> {
     private String identity;
     private String name;
     private String country;
@@ -83,6 +84,7 @@ public class Deposit {
     public int getTimeConstraints() {
         return timeConstraints;
     }
+
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
@@ -95,5 +97,10 @@ public class Deposit {
         builder.append("Profitability: ").append(getProfitability()).append('\n');
         builder.append("Time Constraints: ").append(getTimeConstraints()).append('\n');
         return builder.toString();
+    }
+
+    @Override
+    public int compareTo(Deposit o) {
+        return this.getAmountOnDeposit() - o.getAmountOnDeposit();
     }
 }

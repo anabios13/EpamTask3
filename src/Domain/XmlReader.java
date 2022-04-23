@@ -44,8 +44,7 @@ public class XmlReader {
                             deposit.setAmountOnDeposit(Integer.parseInt(reader.getElementText()));
                         } else if ("profitability".equals(tagName)) {
                             deposit.setProfitability(Integer.parseInt(reader.getElementText()));
-                        }
-                        else if ("timeConstraints".equals(tagName)) {
+                        } else if ("timeConstraints".equals(tagName)) {
                             deposit.setTimeConstraints(Integer.parseInt(reader.getElementText()));
                         }
                         break;

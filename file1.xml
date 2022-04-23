@@ -7,7 +7,7 @@
     <depositType>Demand</depositType>
     <depositor>Ivanov</depositor>
     <accountID>125</accountID>
-    <amountOnDeposit>100</amountOnDeposit>
+    <amountOnDeposit>10000</amountOnDeposit>
     <profitability>13</profitability>
     <timeConstraints>2</timeConstraints>
 </deposit>
@@ -17,6 +17,16 @@
         <depositType>Demand</depositType>
         <depositor>Petrov</depositor>
         <accountID>126</accountID>
+        <amountOnDeposit>1000</amountOnDeposit>
+        <profitability>15</profitability>
+        <timeConstraints>1</timeConstraints>
+    </deposit>
+    <deposit id="3">
+        <name>BankN</name>
+        <country>Belarus</country>
+        <depositType>Term</depositType>
+        <depositor>Pot</depositor>
+        <accountID>128</accountID>
         <amountOnDeposit>1000</amountOnDeposit>
         <profitability>15</profitability>
         <timeConstraints>1</timeConstraints>
